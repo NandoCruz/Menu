@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #450172;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* MENU DESKTOP */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo p{
+    font-family: Impact;
+    color: #fff;
+    font-size: 40px;
+}
+
+header .logo span{
+    font-family: Impact;
+    color: #77fe02;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+header nav ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    transition: .2s;
+}
+
+header a:hover{
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+header .github{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #77fe02;
+    transition: 0.2s;
+}
+
+header .github:hover{
+    transform: scale(1.1);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px #77fe02;
+}
+
+

@@ -4,24 +4,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: #450172;
-}
-
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
 /* MENU DESKTOP */
-header{
-    padding: 40px 4%;
-}
-
 header > .interface{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 999;
+    background-color: #160172;
 }
 
 header .logo p{
@@ -70,9 +62,33 @@ header .github{
 }
 
 header .github:hover{
+    width: 35px;
+    height: 35px;
     transform: scale(1.1);
     border-radius: 50%;
     box-shadow: 0px 0px 5px 5px #77fe02;
 }
 
+#inicio, #sobre, #cartao, #contato{
+    width: 100%;
+    height: 750px;
+    background-color: #77fe02;
+    font-size: 20px;
+    text-align: center;
+}
 
+#inicio{
+    background-color: #ffe602;
+}
+
+#inicio h1, #sobre h1{
+    color: #fff;
+}
+
+#cartao{
+    background-color: #fff;
+}
+
+#contato{
+    background-color: #450172;
+}

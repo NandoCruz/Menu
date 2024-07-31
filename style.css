@@ -6,6 +6,7 @@
 
 :root{
     --txt-color: #fed000;
+    --bg-color1: #056bfa;
     --bg-color: #0A254B;
 }
 
@@ -58,15 +59,13 @@ header a{
     transition: .2s;
 }
 
-header a:hover{
-    font-weight: 400;
+header .menu-desktop a:hover{
+    font-weight: 600;
     transform: scale(1.05);
-    color: var(--txt-color);
-    padding-bottom: 5px;
-    border-bottom: solid 4px var(--txt-color);
+    color: var(--txt-color)
 }
 
-header .github{
+header .github a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +74,7 @@ header .github{
     transition: 0.2s;
 }
 
-header .github:hover{
+header .github a:hover{
     width: 35px;
     height: 34.5px;
     transform: scale(1.1);
@@ -125,4 +124,83 @@ header .github:hover{
     100%{
         top: 30px;
     }
+}
+
+/* SESSÃO SOBRE */
+.sobre, .cartao, .contato{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color1);
+}
+.sobre .garra img{
+    width: 300px;
+}
+
+.sobre .garra p{
+    font-family: Impact;
+    font-size: 40px;
+    margin-top: 40px;
+    color: var(--txt-color);
+}
+.sobre .txt-garra p, .cartao p, .contato p{
+    width: 500px;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* SESSÃO CARTÃO */
+.cartao {
+    background-color: var(--txt-color);
+}
+
+/* SESSÃO CONTATO */
+.contato {
+    background-color: var(--bg-color);
+}
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+
+}
+
+.formulario h1{
+    color: var(--txt-color);
+    font-size: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #304e79;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px ;
+}
+
+form textarea{
+    resize: none;
+    max-height: 400px;
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 200px;
+    color: var(--bg-color);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
 }

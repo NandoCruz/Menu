@@ -1,0 +1,22 @@
+/* SESSÃO SOBRE */
+.sobre, .cartao, .contato{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color1);
+}
+.sobre .garra img{
+    width: 300px;
+}
+
+.sobre .garra p{
+    font-family: Impact;
+    font-size: 40px;
+    margin-top: 40px;
+    color: var(--txt-color);
+}
+.sobre .txt-garra p, .cartao p, .contato p{
+    width: 500px;
+    font-size: 30px;
+    color: #fff;
+}

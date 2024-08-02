@@ -1,6 +1,10 @@
 /* SESSÃO CONTATO - FORMULÁRIO */
 
 .contato {
+    width: 100%;
+    height: 750px;
+    font-size: 20px;
+    text-align: center;
     background-color: var(--bg-color);
 }
 

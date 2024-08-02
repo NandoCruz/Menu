@@ -1,4 +1,62 @@
 /* SESSÃO CARTÃO */
+:root{
+    --txt-color: #fed000;
+    --bg-color1: #056bfa;
+    --bg-color: #0A254B;
+}
+
 .cartao {
-    background-color: #c0c0c0;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-color);
+}
+
+.cartao p{
+    text-align: 35px;
+    color: var(--bg-color);
+}
+
+.cartao .container-scroll{
+    width: 900px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--txt-color);
+}
+
+.cartao .container-scroll .container{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.container-scroll .container img{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+}
+
+.container-scroll .container .container-texto{
+    width: 250px;
+    height: 49px;
+    position: relative;
+    font-size: 18px;
+    top: 195px;
+}
+
+.container-scroll .container .container-texto p{
+    width: 235px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15px;
+    background-color: rgba(250, 250, 250, 0.5);
 }

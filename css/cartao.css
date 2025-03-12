@@ -19,41 +19,76 @@ Section.cartao {
         width: 900px;
         height: 400px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         border-radius: 20px;
         background-color: #cacaca;
+        overflow: hidden;
 
-        & .container{
-            width: 250px;
-            height: 250px;
-            margin-left: 40px;
+        & .arrows{
+            width: 90%;
+            height: 80px;
+            margin: 0 auto;
             display: flex;
-            flex-direction: column;
-            background-color: #fff;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
 
-            & img{
-                width: 250px;
-                height: 250px;
-                position: absolute;
-            }
+            & button{
+                background-color: transparent;
+                border: none;
 
-            & .container-texto{
-                width: 250px;
-                height: 49px;
-                position: relative;
-                font-size: 18px;
-                top: 195px;
-
-                & p{
-                    width: 235px;
-                    font-size: 18px;
-                    font-weight: 600;
-                    text-align: left;
-                    padding-left: 15px;
+                & span{
                     color: var(--bg-color);
-                    background-color: rgba(250, 250, 250, 0.5);
+                    font-weight: bold;
+                    font-size: 18px;
                 }
             }
         }
+
+        & .container-master{
+            display: flex;
+            & .container{
+                width: 250px;
+                height: 250px;
+                margin-left: 40px;
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+
+                & img{
+                    width: 250px;
+                    height: 250px;
+                    position: absolute;
+                }
+
+                & .container-texto{
+                    width: 250px;
+                    height: 49px;
+                    position: relative;
+                    font-size: 18px;
+                    top: 195px;
+
+                    & p{
+                        width: 235px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: left;
+                        padding-left: 15px;
+                        color: var(--bg-color);
+                        background-color: rgba(250, 250, 250, 0.5);
+                    }
+                }
+            }
+
+            & .fade{
+                animation-name: fade;
+                animation-duration: 1.5;
+            }
+        }
     }
+}
+
+@keyframes fade{
+    from {opacity: .2}
+    to{opacity: 1}
 }

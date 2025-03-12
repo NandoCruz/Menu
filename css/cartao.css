@@ -1,66 +1,59 @@
 /* SESSÃO CARTÃO */
-:root{
-    --txt-color: #fed000;
-    --bg-color1: #056bfa;
-    --bg-color: #0A254B;
-}
-
-.cartao {
-    width: 100%;
-    height: 750px;
+Section.cartao {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--bg-color);
-}
 
-.cartao .titulo{
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 50px;
-    text-align: 35px;
-    color: var(--txt-color);
-}
+    & .titulo{
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: var(--txt-color);
+    }
 
-.cartao .container-scroll{
-    width: 900px;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background-color: #cacaca;
-}
+    & .container-scroll{
+        width: 900px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #cacaca;
 
-.cartao .container-scroll .container{
-    width: 250px;
-    height: 250px;
-    margin-left: 40px;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-}
+        & .container{
+            width: 250px;
+            height: 250px;
+            margin-left: 40px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
 
-.container-scroll .container img{
-    width: 250px;
-    height: 250px;
-    position: absolute;
-}
+            & img{
+                width: 250px;
+                height: 250px;
+                position: absolute;
+            }
 
-.container-scroll .container .container-texto{
-    width: 250px;
-    height: 49px;
-    position: relative;
-    font-size: 18px;
-    top: 195px;
-}
+            & .container-texto{
+                width: 250px;
+                height: 49px;
+                position: relative;
+                font-size: 18px;
+                top: 195px;
 
-.container-scroll .container .container-texto p{
-    width: 235px;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: left;
-    padding-left: 15px;
-    color: var(--bg-color);
-    background-color: rgba(250, 250, 250, 0.5);
+                & p{
+                    width: 235px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: left;
+                    padding-left: 15px;
+                    color: var(--bg-color);
+                    background-color: rgba(250, 250, 250, 0.5);
+                }
+            }
+        }
+    }
 }

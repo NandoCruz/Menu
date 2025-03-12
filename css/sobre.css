@@ -1,26 +1,39 @@
 /* SESSÃO SOBRE */
-.sobre, .cartao, .contato{
-    width: 100%;
-    height: 750px;
-    font-size: 20px;
-    text-align: center;
+section.sobre{
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--bg-color1);
-}
-.sobre .garra img{
-    width: 300px;
-}
+    background-color: var(--bg-color);
 
-.sobre .garra p{
-    font-family: Impact;
-    font-size: 40px;
-    margin-top: 40px;
-    color: var(--txt-color);
-}
-.sobre .txt-garra p, .cartao p, .contato p{
-    width: 500px;
-    font-size: 30px;
-    color: #fff;
+    & .garra{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & img{
+            width: 400px;
+        }
+
+        & p{
+            font-family: Impact;
+            font-size: 40px;
+            margin-top: 40px;
+            color: var(--txt-color);
+        }
+    }
+
+    & .txt-garra{
+
+        & p{
+            max-width: 700px;
+            font-size: 22px;
+            text-align: justify;
+            line-height: 1.3em;
+            color: #fff;
+        }
+    }
 }

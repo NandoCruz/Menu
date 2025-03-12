@@ -1,55 +1,59 @@
 /* SESSÃO CONTATO - FORMULÁRIO */
 
-.contato {
-    width: 100%;
-    height: 750px;
+section.contato {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
     text-align: center;
     background-color: var(--bg-color);
-}
 
-.formulario {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 40px;
+    & .formulario {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-}
+        & h1{
+            color: var(--txt-color);
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
 
-.formulario h1{
-    color: var(--txt-color);
-    font-size: 40px;
-}
+        & form{
+            & input, textarea{
+                width: 100%;
+                background-color: #304e79;
+                border: 0;
+                outline: 0;
+                padding: 20px 15px;
+                border-radius: 15px;
+                color: #fff;
+                font-size: 18px;
+                margin-top: 20px ;
+            }
 
-form input, form textarea{
-    width: 100%;
-    background-color: #304e79;
-    border: 0;
-    outline: 0;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: #fff;
-    font-size: 18px;
-    margin-top: 20px ;
-}
+            & textarea{
+                resize: none;
+                max-height: 400px;
+            }
 
-form textarea{
-    resize: none;
-    max-height: 400px;
-}
-form .btn-enviar{
-    margin-top: 20px;
-    text-align: center;
-}
+            & .btn-enviar{
+                margin-top: 20px;
+                text-align: center;
 
-form .btn-enviar input{
-    width: 200px;
-    color: var(--bg-color);
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .2s;
+                & input{
+                    width: 200px;
+                    color: var(--bg-color);
+                    color: #fff;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: .2s;
+                }
+            }   
+        }   
+    }
 }

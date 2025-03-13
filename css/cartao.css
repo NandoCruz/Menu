@@ -17,7 +17,7 @@ Section.cartao {
 
     & .container-scroll{
         width: 900px;
-        height: 400px;
+        height: 430px;
         display: flex;
         flex-direction: column;
         border-radius: 20px;
@@ -26,7 +26,7 @@ Section.cartao {
 
         & .arrows{
             width: 90%;
-            height: 80px;
+            height: 70px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -47,12 +47,17 @@ Section.cartao {
 
         & .container-master{
             display: flex;
+            position: relative;
+            align-items: center;
+            width: 900px;
+            height: 300px;
+            
             & .container{
+                display: flex;
+                flex-direction: column;
                 width: 250px;
                 height: 250px;
                 margin-left: 40px;
-                display: flex;
-                flex-direction: column;
                 background-color: #fff;
 
                 & img{

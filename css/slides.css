@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.container-scroll{
+    position: relative;
+
+    & .radios{
+        width: 900px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+
+        & input{
+            width: 20px;
+            height: 20px;
+        }
+
+        & input:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+
+    & .nav-manual, .nav-auto{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: -30px;
+        width: 900px;
+        height: 30px;
+
+        & .manual-btn, div{
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--bg-color);
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        & .manual-btn:not(:last-child), div:not(:last-child){
+            margin-right: 10px;
+        }
+
+        & .manual-btn:hover{
+            background-color: var(--bg-color);
+        }
+    }
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: var(--bg-color);
+}

@@ -17,33 +17,13 @@ Section.cartao {
 
     & .container-scroll{
         width: 900px;
-        height: 430px;
+        height: 400px;
         display: flex;
         flex-direction: column;
+        padding-top: 30px;
         border-radius: 20px;
         background-color: #cacaca;
         overflow: hidden;
-
-        & .arrows{
-            width: 90%;
-            height: 70px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-
-            & button{
-                background-color: transparent;
-                border: none;
-
-                & span{
-                    color: var(--bg-color);
-                    font-weight: bold;
-                    font-size: 18px;
-                }
-            }
-        }
 
         & .container-master{
             display: flex;

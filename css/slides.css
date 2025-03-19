@@ -13,23 +13,9 @@
         display: flex;
         justify-content: center;
         
-
         & input{
             width: 20px;
-            height: 20px;
-
-            & #radio3:checked {
-                & .fade{
-                    margin-left: -50%;
-                }
-            }
-        }
-
-    
-        & #radio1:checked {
-            & .fade{
-                margin-left: 0%;
-            }
+            height: 20px;           
         }
 
         & input:not(:last-child){
@@ -70,6 +56,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
+            background-color: #fff;
             transition: 0.4s ease-in-out;
         }
         

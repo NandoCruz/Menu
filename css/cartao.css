@@ -29,7 +29,7 @@ Section.cartao {
             display: flex;
             position: relative;
             align-items: center;
-            width: 900px;
+            width: 1450px;
             height: 300px;
             
             & .container{
@@ -68,6 +68,12 @@ Section.cartao {
             & .fade{
                 animation-name: fade;
                 animation-duration: 1.5;
+            }
+        }
+
+        & .radios{
+            & input{
+                display: none;
             }
         }
     }

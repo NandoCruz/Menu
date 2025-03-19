@@ -1,5 +1,5 @@
 /* SESSÃO CARTÃO */
-Section.cartao {
+section.cartao {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -9,53 +9,54 @@ Section.cartao {
     background-color: var(--bg-color);
 
     & .titulo{
-        font-size: 40px;
+        font-size: 3em;
         font-weight: 600;
-        margin-bottom: 50px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
         color: var(--txt-color);
     }
 
     & .container-scroll{
-        width: 900px;
-        height: 400px;
+        width: 815px;
+        height: 350px;
         display: flex;
         flex-direction: column;
-        padding-top: 30px;
+        justify-content: center;
+        padding: 15px 0;
         border-radius: 20px;
         background-color: #cacaca;
-        overflow: hidden;
 
         & .container-master{
             display: flex;
             position: relative;
             align-items: center;
-            width: 1450px;
+            width: 780px;
             height: 300px;
+            margin-left: 20px;
+            overflow: hidden;
             
             & .container{
                 display: flex;
                 flex-direction: column;
                 width: 250px;
                 height: 250px;
-                margin-left: 40px;
-                background-color: #fff;
+                margin-right: 15px;
 
                 & img{
-                    width: 250px;
-                    height: 250px;
-                    position: absolute;
+                    width: 100%;
+                    height: 100%;
                 }
 
                 & .container-texto{
+                    position: relative;
                     width: 250px;
                     height: 49px;
-                    position: relative;
                     font-size: 18px;
-                    top: 195px;
+                    top: -55px;
 
                     & p{
                         width: 235px;
-                        font-size: 18px;
+                        font-size: 1em;
                         font-weight: 600;
                         text-align: left;
                         padding-left: 15px;
@@ -72,14 +73,88 @@ Section.cartao {
         }
 
         & .radios{
-            & input{
-                display: none;
+            display: none;
+        }
+
+        & .nav-manual, .nav-auto{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+
+            & .manual-btn, .nav-auto{
+                width: 50px;
+                height: 20px;
+                border-radius: 15px;
+                border: 1px solid var(--bg-color);
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+            }
+
+            & .manual-btn:not(:last-child), div:not(:last-child){
+                margin-right: 10px;
+            }
+    
+            & .manual-btn:hover{
+                background-color: var(--bg-color);
+            }
+        }
+
+        & .nav-manual{
+            margin-top: -30px;
+        }
+
+        & .nav-auto{    
+            & div{
+                width: 50px;
+                height: 20px;
+                border-radius: 15px;
+                background-color: #fff;
+                transition: 0.4s ease-in-out;
+            }
+            
+            & .active{
+                background-color: var(--bg-color);
             }
         }
     }
 }
 
+
+#radio2:checked ~ .fade{
+    margin-left: -25%;
+}
+
 @keyframes fade{
     from {opacity: .2}
     to{opacity: 1}
+}
+
+@media screen and (max-width:870px) {
+    section.cartao {
+        & .container-scroll{
+            width: 550px;
+                & .container-master{
+                    width: 520px;
+                }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    section.cartao {
+        & .titulo{
+            margin-top: 100px;
+        }
+        & .container-scroll{
+            width: 350px;
+
+            & .container-master{
+                width: 250px;
+                margin: auto;                
+            }
+        }
+    }
 }

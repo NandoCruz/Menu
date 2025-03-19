@@ -1,39 +1,74 @@
 /* SESSÃO SOBRE */
 section.sobre{
-    width: 100vw;
+    width: 80%;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color: var(--bg-color);
+    justify-content: space-around;
+    margin-left: 50%;
+    transform: translateX(-50%);
 
     & .garra{
-        width: 500px;
+        width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
         & img{
-            width: 400px;
+            width: 100%;
         }
 
         & p{
             font-family: Impact;
-            font-size: 40px;
+            font-size: 30px;
             margin-top: 40px;
             color: var(--txt-color);
         }
     }
 
-    & .txt-garra{
+    & .descricao{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        margin-left: 40px;
 
         & p{
-            max-width: 700px;
-            font-size: 22px;
-            text-align: justify;
+            text-align: left;
+            font-size: 20px;
             line-height: 1.3em;
+            letter-spacing: 1.8px;
             color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    section.sobre{
+        flex-direction: column;
+
+        & .garra{
+            margin-top: 100px;
+
+            & p{
+                margin-top: 20px;
+            }
+        }
+
+        & .descricao{
+            width: 100%;
+            margin-top: 40px;
+        }
+
+    }
+}
+
+@media screen and (max-width:640px) {
+    section.sobre{
+        margin-bottom: 100px;
+        & .descricao{
+            width: 350px;
         }
     }
 }

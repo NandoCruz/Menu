@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -37,13 +37,13 @@ header {
             & p{
                 font-family: Impact;
                 color: #fff;
-                font-size: 40px;
+                font-size: 35px;
             }
 
             & span{
                 font-family: Impact;
                 color: var(--txt-color);
-                font-size: 40px;
+                font-size: 35px;
                 text-transform: uppercase;
             }
         }
@@ -61,7 +61,7 @@ header {
                         text-decoration: none;
                         display: inline-block;
                         color: #fff;
-                        font-size: 20px;
+                        font-size: 18px;
                         transition: .2s;
                     }
 
@@ -74,13 +74,42 @@ header {
             }
         }
 
-        & .github a{
+        & .rede-social{
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 35px;
-            color: var(--txt-color);
-            transition: 0.2s;
+            width: 200px;
+            height: 70px;
+
+            & a{
+                display: flex;
+                margin: auto;
+                width: 30px;
+                height: 30px;
+                font-size: 30px;
+                color: var(--txt-color);
+                transition: 0.2s;
+
+                & i{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                }
+                    
+                & i:hover{
+                    transform: scale(1.2);
+                    box-shadow: 0px 0px 10px 0px var(--txt-color);
+                }
+            }
+
+            & .logo-linkedin{
+                i{
+                border-radius: 0;
+                }
+             }
         }
         
         & .github a:hover{
@@ -93,15 +122,15 @@ header {
     }
 }
 
-Section#inicio{
-    width: 100%;
+section#inicio{
+    width: 80%;
     height: 100vh;
     font-size: 20px;
     text-align: center;
+    margin: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--bg-color);
 
     & .foto{
         
@@ -110,7 +139,7 @@ Section#inicio{
         animation: flutuar 2s ease-in-out infinite alternate;
 
         & img{
-            width: 350px;
+            width: 80%;
         }
 
         & p{
@@ -128,18 +157,21 @@ Section#inicio{
     }
 
     & .descricao{
+        width: 50%;
         h1{
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 15px;
             text-align: left;
-            color: #fff;
+            color: var(--txt-color);
         }
 
         p{
             max-width: 650px;
-            font-size: 30px;
-            text-align: justify;
-            color: var(--txt-color);
+            font-size: 20px;
+            line-height: 1.3em;
+            letter-spacing: 1.8px;
+            text-align: left;
+            color: #fff;
         }
     }
 
@@ -152,5 +184,51 @@ Section#inicio{
 
     100%{
         top: 30px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    header {
+        & .interface{
+            & .rede-social{
+                display: none;
+            }
+        }
+    }
+    Section#inicio{
+        flex-direction: column;
+        
+        & .foto{
+            margin-top: 70px;
+        }
+
+        & .descricao{
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width:870px) {
+    section#inicio{        
+        & .foto{
+            & img{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    header {
+        & nav{
+            display: none;
+        }
+    }
+
+    section#inicio{
+        & .descricao{
+            width: 350px;
+            margin-top: 60px;
+        }
     }
 }

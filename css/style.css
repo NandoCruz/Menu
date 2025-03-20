@@ -20,7 +20,7 @@ body{
 }
 
 /* MENU DESKTOP */
-header {
+header{
     & .interface{
         width: 100%;
         height: 50px;
@@ -177,6 +177,62 @@ section#inicio{
 
 }
 
+.rodape{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 1px;
+    box-shadow: 0 0 10px 8px var(--txt-color);
+
+    & p{
+        font-size: 18px;
+        color: #fed000;
+        text-align: center;
+    }
+
+    & .rede-social{
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: 70px;
+
+        & a{
+            display: flex;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+            color: var(--txt-color);
+            transition: 0.2s;
+
+            & i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+
+            & i:hover{
+                transform: scale(1.2);
+                box-shadow: 0px 0px 10px 0px var(--txt-color);
+            }
+        }
+
+        & .logo-linkedin a:hover{
+            width: 35px;
+            height: 34.5px;
+            transform: scale(1.1);
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px 5px var(--txt-color);
+        }
+    }
+}
+
 @keyframes flutuar {
     0%{
         top: 0;
@@ -195,7 +251,7 @@ section#inicio{
             }
         }
     }
-    Section#inicio{
+    section#inicio{
         flex-direction: column;
         
         & .foto{
@@ -208,6 +264,7 @@ section#inicio{
     }
 }
 
+/* Responsividade */
 @media screen and (max-width:870px) {
     section#inicio{        
         & .foto{

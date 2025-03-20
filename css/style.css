@@ -283,9 +283,24 @@ section#inicio{
     }
 
     section#inicio{
+        width: 100%;
+        height: 100%;
+
+        & .foto{
+            width: 70%;
+
+            & p{
+                font-size: 35px;
+            }
+    
+            & span{
+                font-size: 35px;
+            }
+        }
         & .descricao{
             width: 350px;
-            margin-top: 60px;
+            margin-top: 80px;
+            margin-bottom: 30px;
         }
     }
 }

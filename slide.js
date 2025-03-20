@@ -1,8 +1,13 @@
+let btnNext = document.querySelector('.next')
+let btnBack = document.querySelector('.back')
+
 let radio = document.querySelector('.manual-btn')
-let btnRadio = document.getElementById('.manual-btn')
+
 let containerScroll = document.querySelector('.container-scroll')
-let item = containerScroll.querySelectorAll('.nav-auto .auto-btn')
+let list = document.querySelector('.container-scroll .container-master')
 let container = containerScroll.querySelectorAll('.container-master .container')
+
+let item = containerScroll.querySelectorAll('.nav-auto .auto-btn')
 
 let cont = 1
 let active = 0
@@ -10,6 +15,26 @@ let firtPosition = 0
 let lastPosition = item.length -1
 
 document.getElementById('radio1').checked = true
+
+btnNext.onclick = () => moveItemClick('next')
+btnBack.onclick = () => moveItemClick('back')
+
+function moveItemClick(type){
+    let listItens = containerScroll.querySelectorAll('.container-master .container')
+    
+    if (type === 'next'){
+        list.appendChild(listItens[0])
+        containerScroll.classList.add('next')
+    } else {
+        list.prepend(listItens[listItens.length-1])
+        containerScroll.classList.add('back')
+    }
+
+    setInterval(() =>{
+        containerScroll.classList.remove('next')
+        containerScroll.classList.remove('back')
+    }, 2000)
+}
 
 setInterval(() => {
     proximaImg()
@@ -19,7 +44,7 @@ function proximaImg(){
 
     cont++
     
-    if(cont > 5){
+    if(cont >4 ){
         cont = 1
     }
 

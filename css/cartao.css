@@ -1,5 +1,5 @@
-/* SESSÃO CARTÃO */
-section.cartao {
+/* SESSÃO ROBÔS */
+section.robos {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -27,8 +27,8 @@ section.cartao {
         background-color: #cacaca;
 
         & .container-master{
-            display: flex;
             position: relative;
+            display: flex;
             align-items: center;
             width: 780px;
             height: 300px;
@@ -41,29 +41,6 @@ section.cartao {
                 width: 250px;
                 height: 250px;
                 margin-right: 15px;
-
-                & img{
-                    width: 100%;
-                    height: 100%;
-                }
-
-                & .container-texto{
-                    position: relative;
-                    width: 250px;
-                    height: 49px;
-                    font-size: 18px;
-                    top: -55px;
-
-                    & p{
-                        width: 235px;
-                        font-size: 1em;
-                        font-weight: 600;
-                        text-align: left;
-                        padding-left: 15px;
-                        color: var(--bg-color);
-                        background-color: rgba(250, 250, 250, 0.5);
-                    }
-                }
             }
 
             & .fade{
@@ -120,6 +97,30 @@ section.cartao {
             }
         }
     }
+
+    & .arrows{
+        position: absolute;
+        width: 900px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        & button{
+            display: flex;
+            width: 35px;
+            height: 50px;
+            font-size: 40px;
+            background-color: transparent;
+            border: none;
+
+            & img{
+                width: 100%;
+                height: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 
@@ -133,28 +134,40 @@ section.cartao {
 }
 
 @media screen and (max-width:870px) {
-    section.cartao {
+    section.robos {
         & .container-scroll{
             width: 550px;
                 & .container-master{
                     width: 520px;
                 }
         }
+
+        & .arrows{
+            width: 650px;
+        }
     }
 }
 
 @media screen and (max-width:640px) {
-    section.cartao {
+    section.robos {
+        width: 100%;
+        height: 100vh;
+        
         & .titulo{
-            margin-top: 100px;
+            
         }
         & .container-scroll{
-            width: 350px;
+            width: 300px;
 
             & .container-master{
                 width: 250px;
                 margin: auto;                
             }
+        }
+
+        & .arrows{
+            width: 390px;
+            margin-top: 30px;
         }
     }
 }

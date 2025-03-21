@@ -1,50 +1,97 @@
 let btnNext = document.querySelector('.next')
 let btnBack = document.querySelector('.back')
 
-let radio = document.querySelector('.manual-btn')
+let links = document.querySelectorAll('.js-link')
+let sections = document.querySelectorAll('.section')
 
-let containerScroll = document.querySelector('.container-scroll')
-let list = document.querySelector('.container-scroll .container-master')
-let container = containerScroll.querySelectorAll('.container-master .container')
+let container = document.querySelector('.container')
+let list = document.querySelector('.container .list')
 
-let item = containerScroll.querySelectorAll('.nav-auto .auto-btn')
+let listItens = container.querySelectorAll('.list .list-item')
+let itemAuto = container.querySelectorAll('.nav-auto .auto-btn')
 
 let cont = 1
 let active = 0
 let firtPosition = 0
-let lastPosition = item.length -1
+let lastPosition = listItens.length -1
+
+window.addEventListener('scroll', () => {
+
+    sections.forEach(section => {
+        let top = window.scrollY
+        let offset = section.offsetTop
+        let heighSection = section.offsetHeight
+        let idSection = section.getAttribute('id')
+
+        if(top >= offset && top < offset + heighSection){
+            
+            links.forEach(link =>{
+                link.classList.remove('active')
+
+                document.querySelector(`header nav a[href*='${idSection}']`).classList.add('active')
+            })
+        }
+    })
+})
 
 document.getElementById('radio1').checked = true
+
 
 btnNext.onclick = () => moveItemClick('next')
 btnBack.onclick = () => moveItemClick('back')
 
+setInterval(() => {
+    // moveItemFrom()
+    // proximaImg()
+}, 3000)
+
 function moveItemClick(type){
-    let listItens = containerScroll.querySelectorAll('.container-master .container')
+    let listItens = container.querySelectorAll('.list .list-item')
     
     if (type === 'next'){
         list.appendChild(listItens[0])
-        containerScroll.classList.add('next')
+        container.classList.add('next')
+        document.getElementById('radio' + cont).checked = false
+        cont++
+        active ++     
+
     } else {
         list.prepend(listItens[listItens.length-1])
-        containerScroll.classList.add('back')
+        container.classList.add('back')
+        document.getElementById('radio' + cont).checked = false
+        cont--
+        active--     
+
     }
 
     setInterval(() =>{
-        containerScroll.classList.remove('next')
-        containerScroll.classList.remove('back')
+        listItens.classList.remove('next')
+        listItens.classList.remove('back')
     }, 2000)
 }
 
-setInterval(() => {
-    proximaImg()
-}, 3000)
+function moveItemFrom(type){
+    let listItens = container.querySelectorAll('.list .list-item')
+    
+    if (type === 'next'){
+        list.prepend(listItens[listItens.length-1])        
+        container.classList.add('next')
+    } else {
+        list.appendChild(listItens[0])
+        container.classList.add('back')
+    }
+
+    setInterval(() =>{
+        listItens.classList.remove('next')
+        listItens.classList.remove('back')
+    }, 2000)
+}
 
 function proximaImg(){
 
     cont++
     
-    if(cont >4 ){
+    if(cont > 4 ){
         cont = 1
     }
 
@@ -52,11 +99,11 @@ function proximaImg(){
     
     active = active + 1 > lastPosition ? 0 : active +1
 
-    let itemOld = containerScroll.querySelector('.nav-auto .auto-btn.active')
+    let itemOld = container.querySelector('.nav-auto .auto-btn.active')
     itemOld.classList.remove('active')
-    item[active].classList.add('active')
+    itemAuto[active].classList.add('active')
 
-    let containerOld = containerScroll.querySelector('.container-master .container.active')
+    let containerOld = container.querySelector('.list .list-item.active')
     containerOld.classList.remove('active')
     container[active].classList.add('active')
 }

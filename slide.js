@@ -41,8 +41,8 @@ btnNext.onclick = () => moveItemClick('next')
 btnBack.onclick = () => moveItemClick('back')
 
 setInterval(() => {
-    // moveItemFrom()
-    // proximaImg()
+    moveItemFrom()
+    proximaImg()
 }, 3000)
 
 function moveItemClick(type){

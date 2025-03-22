@@ -1,10 +1,11 @@
 /* SESSÃO CONTATO - FORMULÁRIO */
 section.contato {
-    width: 100vw;
+    width: 80%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     font-size: 20px;
     text-align: center;
     background-color: var(--bg-color);
@@ -59,6 +60,7 @@ section.contato {
 
 @media screen and (max-width:640px) {
     section.contato {
+        margin-bottom: 50px;
         & .formulario {
             max-width: 350px;
         }

@@ -12,6 +12,8 @@
 }
 
 body{
+    width: 100vw;
+    height: 100vh;
     background-color: var(--bg-color);
 
     & a{
@@ -22,7 +24,7 @@ body{
 /* MENU DESKTOP */
 header{
     & .interface{
-        width: 100%;
+        width: 100vw;
         height: 70px;
         display: flex;
         justify-content: space-around;
@@ -184,10 +186,11 @@ section#inicio{
 
 .rodape{
     width: 100%;
-    height: 50%;
+    height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: -70px;
     border-top: solid 1px;
     box-shadow: 0 0 10px 8px var(--txt-color);
 
@@ -288,12 +291,12 @@ section#inicio{
     }
 
     section#inicio{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
 
         & .foto{
             width: 70%;
-
+            
             & p{
                 font-size: 35px;
             }
@@ -303,9 +306,24 @@ section#inicio{
             }
         }
         & .descricao{
-            width: 350px;
+            width: 90%;
             margin-top: 80px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            margin-top: 0;
+            
+            & h1{
+                font-size: 25px;
+            }
+
+            & p{
+                font-size: 17px;
+            }
+
+
         }
+    }
+
+    footer{
+        flex-direction: column;
     }
 }

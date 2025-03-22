@@ -67,12 +67,18 @@ section.sobre{
     section.sobre{
         width: 100%;
         height: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 100px;
+        
+        & .garra{
+            width: 230px;
+            margin-top: 20px;
+        }
 
         & .descricao{
-            width: 80%;
+            width: 90%;
+
+            & p{
+                font-size: 16px;
+            }
         }
     }
 }
